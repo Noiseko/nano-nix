@@ -14,10 +14,10 @@ color magenta "\<(builtins|pkgs|lib|config|inputs|outputs|stdenv|fetchFromGitHub
 color magenta "([A-Za-z_][A-Za-z0-9_-]*)[[:space:]]*="
 icolor magenta "description ="
 
-# Constants, Numbers & Bools (Matched to Rust's Magenta Constants/False)
-color magenta "( |=|:|\[|\(|,)[0-9]+(;| |\]|\)|$|,)"
-color magenta " [0-9]+ "
-color magenta "\<(true|false|null)\>"
+# Literal values: numbers & booleans (distinct from magenta attribute keys)
+color cyan "( |=|:|\[|\(|,)[0-9]+"
+color cyan " [0-9]+ "
+color cyan "\<(true|false|null)\>"
 
 # Strings (Matched to Rust's Green Strings)
 color green "\"(\\.|[^\"\\])*\""
